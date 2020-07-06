@@ -32,6 +32,7 @@ Things you may want to cover:
 |name|string|null: false|
 ### Association
 - has_many :groups
+- has_many :messeages
 
 ## messagesテーブル
 |Column|Type|Options|
