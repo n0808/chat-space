@@ -31,30 +31,29 @@ Things you may want to cover:
 |password|string|null: false|
 |name|string|null: false|
 ### Association
-- has_many :groups
-- has_many :user, through: :groups_users
+- has_many :groups, through: :groups_users
 - has_many :messeages
 
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
-|image|sting|null: false|
+|body|text||
+|image|sting||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- belongs_to :groups
+- belongs_to :group
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|name|string|null: false|
 ### Association
 - has_many :users through: :groups_users
 - has_many :messages
+- has_many :groups_users
 
 ## groups_usersテーブル
 |Column|Type|Options|
