@@ -4,7 +4,15 @@
       %span.name name
       %ul.list
         %li.list__list-icon
-         = <i class="far fa-edit"></i>
+          =link_to "#" do
+            = icon('fas', 'far fa-edit')
         %li.list__list-icon
-          設定
-  .side-bar__grops
+          =link_to "#" do
+            = icon('fas', 'cog')
+  .side-bar__groups
+    .side-bar__groups--group
+      %p.group-name tech cmap
+      %p.group-message まだメッセージがありません
+    .side-bar__groups--group
+      %p.group-name tech cmap
+      %p.group-message まだメッセージがありません
