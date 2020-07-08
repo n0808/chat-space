@@ -1,0 +1,18 @@
+.side-bar
+  .side-bar__header
+    .side-bar__header--box
+      %span.name name
+      %ul.list
+        %li.list__list-icon
+          =link_to "#" do
+            = icon('fas', 'far fa-edit')
+        %li.list__list-icon
+          =link_to "#" do
+            = icon('fas', 'cog')
+  .side-bar__groups
+    .side-bar__groups--group
+      %p.group-name tech cmap
+      %p.group-message まだメッセージがありません
+    .side-bar__groups--group
+      %p.group-name tech cmap
+      %p.group-message まだメッセージがありません
