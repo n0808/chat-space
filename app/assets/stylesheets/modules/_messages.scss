@@ -44,6 +44,7 @@
     &__groups{
       height:  calc(100vh - 100px);
       background-color: #2f3e51;
+      box-sizing: border-box;
       &--group{
         height: 91px;
         width: 260px;
