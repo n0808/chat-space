@@ -1,13 +1,14 @@
 .side-bar
   .side-bar__header
     .side-bar__header--box
-      %span.name name
+      %span.name
+        = current_user.name
       %ul.list
         %li.list__list-icon
           =link_to "#" do
             = icon('fas', 'far fa-edit')
         %li.list__list-icon
-          =link_to "#" do
+          =link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
   .side-bar__groups
     .side-bar__groups--group
