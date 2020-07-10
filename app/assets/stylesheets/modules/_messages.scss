@@ -5,6 +5,9 @@
 .wrapper{
   display: flex;
   height: 100vh;
+  a{
+    text-decoration: none;
+  }
   .side-bar{
    width: 300px;
    background-color: #253141;
@@ -49,15 +52,16 @@
         height: 91px;
         width: 260px;
         margin: 20px;
-        color: #ffffff;
          .group-name{
             padding-top: 20px;
             padding-bottom:5px;
             font-size: 15px;
+            color: #ffffff;
           }
          .group-message{
             padding-bottom:5px;
             font-size: 11px;
+            color: #ffffff;
          }
        }
      }
