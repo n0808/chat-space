@@ -5,7 +5,7 @@
         = current_user.name
       %ul.list
         %li.list__list-icon
-          =link_to "#" do
+          =link_to new_group_path do
             = icon('fas', 'far fa-edit')
         %li.list__list-icon
           =link_to edit_user_path(current_user) do
