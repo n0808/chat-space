@@ -1,28 +1,24 @@
 .main
   .main__main-header
     .main__main-header--group
-      %p.group-name test
-      %p.member Member
+      .group-name
+        = @group.name
+      .ul-member
+        Member : 
+        - @group.users.each do |user|
+          .li= user.name
 
     .main__main-header--edit
       =link_to "#" do 
         Edit
-
   .main__contents
-    .main__contents__message
-      %span.username name
-      %span.time 2020/7/7(Wed) 00:17:43
-      %p.content おはよう！
-    .main__contents__message
-      %span.username name
-      %span.time 2020/7/7(Wed) 00:17:43
-      %p.content 今日は夜から雨
+    = render @messages
 
   .main__chat-form
-    .main__chat-form--box
-      %form.new-message
-        %input{type:"text",class:"content-form",placeholder:"type a message"}
-        %label{class:"label"}
-          =icon('fas','image')
-          %input{type:"file",class:"file"}
-        %input{type:"submit",class:"submit-btn",value:"Send"} 
+    = form_with model: [@group, @message], html:{class: "Form"}, local: true do |f|
+      .Form__new-message
+        = f.text_field :content, class: 'content-form', placeholder: 'type a message'
+        = f.label :image, class: 'label' do
+          = icon('far', 'image', class: 'Form__icon')
+          = f.file_field :image, class: 'file'
+        = f.submit 'Send', class: 'submit-btn'
