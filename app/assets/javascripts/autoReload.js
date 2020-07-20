@@ -47,7 +47,6 @@ $(function(){
     })
     
     .done(function(messages){
-      console.log(messages)
       if (messages.length !== 0){
         let insertHTML = '';
         $.each(messages,function(i,message){
